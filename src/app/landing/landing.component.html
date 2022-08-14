@@ -1,35 +1,4 @@
-<c-header>
-    <c-container fluid>
-      <c-header-brand [routerLink]>BrainQy Solutions and Consultancy Services</c-header-brand>
-      <c-header-nav class="ms-auto">
-        <c-nav-item>
-          <a [active]="true" [routerLink] cNavLink>Home</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/portfolio">PortFolio</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink  routerLink="/components/alert">Contact Us</a>
-        </c-nav-item>
-        <c-nav-item>
-          <a cNavLink routerLink="/affiliates">Affiliates</a>
-        </c-nav-item>
-        <c-dropdown alignment="end">
-          <a cHeaderToggler cDropdownToggle cNavLink [caret]="false"></a>
-          <ul cDropdownMenu>
-            <li><a [routerLink] cDropdownItem>Action</a></li>
-            <li><a [routerLink] cDropdownItem>Another action</a></li>
-            <li>
-              <hr cDropdownDivider>
-            </li>
-            <li><a [routerLink] cDropdownItem>Something else</a></li>
-          </ul>
-        </c-dropdown>
-      </c-header-nav>
-    </c-container>
-    <c-container fluid>
-    </c-container>
-  </c-header>
+<app-oheader></app-oheader>
 <c-carousel [dark]="true" [wrap]="false">
     <c-carousel-indicators></c-carousel-indicators>
     <c-carousel-inner>
@@ -70,62 +39,68 @@
         <c-card>
           <img cCardImg="top" src="./assets/img/angular.jpg">
           <c-card-body>
-            <h5 cCardTitle>Card title</h5>
+            <h5 cCardTitle>AI Powered-Bots</h5>
             <p cCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </p>
-            <button cButton color="light">Go somewhere</button>
+            <button cButton color="light">Know More...</button>
           </c-card-body>
         </c-card>
-        <div class="p-3 border bg-light">Row column</div>
+        <div class="p-3 border bg-light"></div>
       </c-col>
       <c-col>
         <c-card>
           <img cCardImg="top" src="./assets/img/angular.jpg">
           <c-card-body>
-            <h5 cCardTitle>Card title</h5>
+            <h5 cCardTitle>Mobile App developement</h5>
             <p cCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </p>
-            <button cButton color="light">Go somewhere</button>
+            <button cButton color="light">Know More...</button>
           </c-card-body>
         </c-card>
-        <div class="p-3 border bg-light">Row column</div>
+        <div class="p-3 border bg-light"></div>
       </c-col>
       <c-col>
         <c-card>
           <img cCardImg="top" src="./assets/img/angular.jpg">
           <c-card-body>
-            <h5 cCardTitle>Card title</h5>
+            <h5 cCardTitle>Web Developement</h5>
             <p cCardText>
               Some quick example text to build on the card title and make up the bulk of the card's content.
             </p>
-            <button cButton color="light">Go somewhere</button>
+            <button cButton color="light">Know More...</button>
           </c-card-body>
         </c-card>
-        <div class="p-3 border bg-light">Row column</div>
+        <div class="p-3 border bg-light"></div>
       </c-col>
      
     </c-row>
   </c-container>
   <c-container>
-    
+    <c-carousel [dark]="true" [wrap]="false">
+     
+      <c-carousel-inner>
+        <c-carousel-item *ngFor="let slide of slides; index as i;">
+          <c-card>
+        
+            <c-card-body>
+              <h5 cCardTitle>Card title</h5>
+              <p cCardText>
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+             
+            </c-card-body>
+          </c-card>
+         
+        </c-carousel-item>
+      </c-carousel-inner>
+      <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+      <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    </c-carousel>
+  
   </c-container>
 
-  <c-footer>
-    <c-container>
-        <c-row class="align-items-start">
-          <c-col><p>Home</p><p>About Us</p><p>Contact Us</p></c-col>
-          <c-col><p>Boat Development</p><p>Web Developement</p><p>App Development</p></c-col>
-          <c-col>IT Services</c-col>
-        </c-row>
-      </c-container>
-      
-  </c-footer>
-  <div class="ms-auto">
-    <span>Powered by </span>
-    <a href="https://brainqy.in" target="_blank">
-      <span> &copy; 2022</span>
-      <span>BrainQy</span>
-    </a>
-  </div>
+  <app-ofooter></app-ofooter>
+  
+  

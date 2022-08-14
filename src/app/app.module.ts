@@ -4,6 +4,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from '@coreui/angular';
+
 import {
   PERFECT_SCROLLBAR_CONFIG,
   PerfectScrollbarConfigInterface,
@@ -47,6 +48,9 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { LandingComponent } from './landing/landing.component';
 import { AffiliatesComponent } from './affiliates/affiliates.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { OheaderComponent } from './oheader/oheader.component';
+import { OfooterComponent } from './ofooter/ofooter.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -59,7 +63,7 @@ const APP_CONTAINERS = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...APP_CONTAINERS, LandingComponent, AffiliatesComponent],
+  declarations: [AppComponent, ...APP_CONTAINERS, LandingComponent, AffiliatesComponent, FaqsComponent, OheaderComponent, OfooterComponent],
   imports: [
     CarouselModule,
     BrowserModule,
