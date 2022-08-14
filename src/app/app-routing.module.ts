@@ -9,6 +9,7 @@ import { RegisterComponent } from './views/pages/register/register.component';
 import { LandingComponent } from './landing/landing.component';
 import { AffiliatesComponent } from './affiliates/affiliates.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { ContactusComponent } from './contactus/contactus.component';
 
 const routes: Routes = [
   {
@@ -116,11 +117,20 @@ const routes: Routes = [
     data: {
       title: 'Affiliates Page'
     }
-  },{
+  },
+  {
     path: 'faqs',
     component: FaqsComponent,
     data: {
       title: 'FAQs Page'
+    }
+  }
+  ,
+  {
+    path: 'contactus',
+    component: ContactusComponent,
+    data: {
+      title: 'Contact us  Page'
     }
   }
 
