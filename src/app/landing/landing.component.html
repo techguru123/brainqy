@@ -1,0 +1,78 @@
+<c-header>
+    <c-container fluid>
+      <c-header-brand [routerLink]>BrainQy</c-header-brand>
+      <c-header-nav class="ms-auto">
+        <c-nav-item>
+          <a [active]="true" [routerLink] cNavLink>Home</a>
+        </c-nav-item>
+        <c-nav-item>
+          <a cNavLink routerLink="/components/alert">Link</a>
+        </c-nav-item>
+        <c-nav-item>
+          <a cNavLink disabled routerLink="/components/alert">Disabled</a>
+        </c-nav-item>
+        <c-dropdown alignment="end">
+          <a cHeaderToggler cDropdownToggle cNavLink [caret]="false"></a>
+          <ul cDropdownMenu>
+            <li><a [routerLink] cDropdownItem>Action</a></li>
+            <li><a [routerLink] cDropdownItem>Another action</a></li>
+            <li>
+              <hr cDropdownDivider>
+            </li>
+            <li><a [routerLink] cDropdownItem>Something else</a></li>
+          </ul>
+        </c-dropdown>
+      </c-header-nav>
+    </c-container>
+    <c-container fluid>
+    </c-container>
+  </c-header>
+<c-carousel [dark]="true" [wrap]="false">
+    <c-carousel-indicators></c-carousel-indicators>
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let slide of slides; index as i;">
+        <img
+          [src]="slide.src"
+          alt="{{slide.title}}"
+          class="d-block w-100"
+          loading="lazy"
+        />
+        <c-carousel-caption class="d-none d-md-block">
+          <h3>{{slide.title}}</h3>
+          <p>{{slide.subtitle}}</p>
+        </c-carousel-caption>
+      </c-carousel-item>
+    </c-carousel-inner>
+    <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+    <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+  </c-carousel>
+
+  <c-footer>
+    <c-container>
+        <c-row class="align-items-start">
+          <c-col>Home</c-col>
+          <c-col>About Us</c-col>
+          <c-col>IT Services</c-col>
+        </c-row>
+        <c-row class="align-items-center">
+          <c-col>Bot Developejjment</c-col>
+          <c-col>App Developement</c-col>
+          <c-col>Web Developement</c-col>
+        </c-row>
+        <c-row class="align-items-end">
+          <c-col>One of three columns</c-col>
+          <c-col>One of three columns</c-col>
+          <c-col>One of three columns</c-col>
+        </c-row>
+      </c-container>
+      <div>
+        <a href="https://brainqy.in" target="_blank">BrainQy</a>
+        <span> &copy; 2022</span>
+      </div>
+      <div class="ms-auto">
+        <span>Powered by </span>
+        <a href="https://brainqy.in" target="_blank">
+          <span>BrainQy</span>
+        </a>
+      </div>
+  </c-footer>
