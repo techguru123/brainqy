@@ -1,18 +1,18 @@
 <c-header>
     <c-container fluid>
-      <c-header-brand [routerLink]>BrainQy</c-header-brand>
+      <c-header-brand [routerLink]>BrainQy Solutions</c-header-brand>
       <c-header-nav class="ms-auto">
         <c-nav-item>
           <a [active]="true" [routerLink] cNavLink>Home</a>
         </c-nav-item>
         <c-nav-item>
-          <a cNavLink routerLink="/components/alert">Services</a>
+          <a cNavLink routerLink="/portfolio">PortFolio</a>
         </c-nav-item>
         <c-nav-item>
           <a cNavLink  routerLink="/components/alert">Contact Us</a>
         </c-nav-item>
         <c-nav-item>
-          <a cNavLink routerLink="/components/alert">Affiliates</a>
+          <a cNavLink routerLink="/affiliates">Affiliates</a>
         </c-nav-item>
         <c-dropdown alignment="end">
           <a cHeaderToggler cDropdownToggle cNavLink [caret]="false"></a>
@@ -37,8 +37,9 @@
         <img
           [src]="slide.src"
           alt="{{slide.title}}"
-          class="d-block w-100"
+          class="d-block w-50"
           loading="lazy"
+        
         />
         <c-carousel-caption class="d-none d-md-block">
           <h3>{{slide.title}}</h3>
@@ -49,6 +50,67 @@
     <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
     <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
   </c-carousel>
+  <c-container>
+    <c-card>
+        
+        <c-card-body>
+          <h5 cCardTitle>Card title</h5>
+          <p cCardText>
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+         
+        </c-card-body>
+      </c-card>
+</c-container>
+
+  <c-container>
+    <c-row [xs]="2" [lg]="3" [gutter]="{g: 2, lg: {g: 3}}">
+      
+      <c-col>
+        <c-card>
+          <img cCardImg="top" src="./assets/img/angular.jpg">
+          <c-card-body>
+            <h5 cCardTitle>Card title</h5>
+            <p cCardText>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <button cButton color="light">Go somewhere</button>
+          </c-card-body>
+        </c-card>
+        <div class="p-3 border bg-light">Row column</div>
+      </c-col>
+      <c-col>
+        <c-card>
+          <img cCardImg="top" src="./assets/img/angular.jpg">
+          <c-card-body>
+            <h5 cCardTitle>Card title</h5>
+            <p cCardText>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <button cButton color="light">Go somewhere</button>
+          </c-card-body>
+        </c-card>
+        <div class="p-3 border bg-light">Row column</div>
+      </c-col>
+      <c-col>
+        <c-card>
+          <img cCardImg="top" src="./assets/img/angular.jpg">
+          <c-card-body>
+            <h5 cCardTitle>Card title</h5>
+            <p cCardText>
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+            <button cButton color="light">Go somewhere</button>
+          </c-card-body>
+        </c-card>
+        <div class="p-3 border bg-light">Row column</div>
+      </c-col>
+     
+    </c-row>
+  </c-container>
+  <c-container>
+    
+  </c-container>
 
   <c-footer>
     <c-container>
@@ -68,14 +130,12 @@
           <c-col>One of three columns</c-col>
         </c-row>
       </c-container>
-      <div>
-        <a href="https://brainqy.in" target="_blank">BrainQy</a>
-        <span> &copy; 2022</span>
-      </div>
-      <div class="ms-auto">
-        <span>Powered by </span>
-        <a href="https://brainqy.in" target="_blank">
-          <span>BrainQy</span>
-        </a>
-      </div>
+      
   </c-footer>
+  <div class="ms-auto">
+    <span>Powered by </span>
+    <a href="https://brainqy.in" target="_blank">
+      <span> &copy; 2022</span>
+      <span>BrainQy</span>
+    </a>
+  </div>
