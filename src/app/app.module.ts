@@ -4,7 +4,7 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule, CarouselModule } from '@coreui/angular';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   PERFECT_SCROLLBAR_CONFIG,
   PerfectScrollbarConfigInterface,
@@ -52,6 +52,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { OheaderComponent } from './oheader/oheader.component';
 import { OfooterComponent } from './ofooter/ofooter.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { ShareModule } from 'ngx-sharebuttons';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -68,6 +69,8 @@ const APP_CONTAINERS = [
   imports: [
     CarouselModule, AccordionModule,
     SharedModule,
+    ShareModule,
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
