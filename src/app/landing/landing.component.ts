@@ -11,7 +11,7 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cards[0] = { body: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.'}
+    this.cards[0] = { body: 'In an effort to make the world more mentally resilient, we developed Brainqy - an AI chatbot that leverages evidence-based cognitive-behavioral techniques (CBT) to make you feel heard. Blended with professional human support, Brainqy provides 24/7 high-quality mental health support.'}
     this.cards[1] = { body: 'This card has supporting text below as a natural lead-in to additional content.'}
     this.cards[2] = { body: 'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.'}
  
